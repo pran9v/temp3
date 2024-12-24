@@ -6,4 +6,8 @@ export interface Product {
   image: string;
   rating: number;
   sizes: string[];
+  dummyDetails: Array<{
+    label: string;
+    value: string;
+  }>;
 }

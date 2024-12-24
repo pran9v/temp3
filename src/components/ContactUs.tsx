@@ -15,6 +15,9 @@ const ContactUsForm = () => {
   return (
     <div className="pt-40 max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-semibold mb-6">Contact Us</h2>
+      <p className="mb-6 text-gray-600 text-xl">
+        Contact us at: <a href="mailto:email@emgila.com" className="text-purple-600 hover:underline">support@kiddojacket.site</a>
+      </p>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="name" className="block text-lg font-semibold">Name</label>

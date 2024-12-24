@@ -87,6 +87,11 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Contact Information */}
+        <div className="mt-8 text-center text-gray-400">
+          <p>Contact us at: <a href="mailto:email@emgila.com" className="text-white hover:underline">support@kiddojacket.site</a></p>
+        </div>
+
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Kiddo Jacket. All rights reserved.</p>

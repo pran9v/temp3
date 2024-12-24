@@ -12,7 +12,14 @@ export const products: Product[] = [
     price: 23.37,
     image: image1,
     rating: 5,
-    sizes: ['0-3M', '3-6M', '6-9M', '9-12M']
+    sizes: ['0-3M', '3-6M', '6-9M', '9-12M'],
+    dummyDetails: [
+      { label: 'Material', value: 'Polyester' },
+      { label: 'Weight', value: '1.2kg' },
+      { label: 'Care Instructions', value: 'Machine wash cold' },
+      { label: 'Brand', value: 'KiddoJacket' },
+      { label: 'Color', value: 'Pink' },
+    ]
   },
   {
     id: 'fur-hooded-coat',
@@ -21,7 +28,14 @@ export const products: Product[] = [
     price: 29.41,
     image: image2,
     rating: 4.5,
-    sizes: ['0-3M', '3-6M', '6-9M', '9-12M']
+    sizes: ['0-3M', '3-6M', '6-9M', '9-12M'],
+    dummyDetails: [
+      { label: 'Material', value: 'Faux Mink Fur' },
+      { label: 'Weight', value: '1.5kg' },
+      { label: 'Care Instructions', value: 'Hand wash cold' },
+      { label: 'Brand', value: 'KiddoJacket' },
+      { label: 'Color', value: 'Brown' },
+    ]
   },
   {
     id: 'fuzzy-hooded',
@@ -30,7 +44,14 @@ export const products: Product[] = [
     price: 45.99,
     image: image3,
     rating: 5,
-    sizes: ['3-6M', '6-9M', '9-12M', '12-18M']
+    sizes: ['3-6M', '6-9M', '9-12M', '12-18M'],
+    dummyDetails: [
+      { label: 'Material', value: 'Cotton & Polyester blend' },
+      { label: 'Weight', value: '0.9kg' },
+      { label: 'Care Instructions', value: 'Dry clean only' },
+      { label: 'Brand', value: 'KiddoJacket' },
+      { label: 'Color', value: 'Khaki' },
+    ]
   },
   {
     id: 'winter-set',
@@ -39,6 +60,13 @@ export const products: Product[] = [
     price: 12.81,
     image: image4,
     rating: 4.8,
-    sizes: ['6-9M', '9-12M', '12-18M', '18-24M']
+    sizes: ['6-9M', '9-12M', '12-18M', '18-24M'],
+    dummyDetails: [
+      { label: 'Material', value: 'Fleece' },
+      { label: 'Weight', value: '1.0kg' },
+      { label: 'Care Instructions', value: 'Machine wash cold' },
+      { label: 'Brand', value: 'KiddoJacket' },
+      { label: 'Color', value: 'White' },
+    ]
   }
 ];

@@ -19,7 +19,7 @@ export default function ProductDetail() {
   }
 
   const handleAddToCart = () => {
-    navigate('/order-confirmation', { 
+    navigate('/order-confirmation', {
       state: { product, selectedSize }
     });
   };
@@ -31,7 +31,7 @@ export default function ProductDetail() {
           <div className="md:flex">
             <div className="md:flex-shrink-0">
               <img
-                className="h-96 w-full object-cover md:w-96"
+                className="h-104 w-full object-cover md:w-96"
                 src={product.image}
                 alt={product.name}
               />
@@ -46,6 +46,17 @@ export default function ProductDetail() {
               <p className="text-xl text-gray-600 mb-6">
                 {product.description}
               </p>
+
+              {/* Displaying Dummy Details */}
+              <div className="space-y-4 mb-6">
+                {product.dummyDetails.map((detail, index) => (
+                  <div key={index} className="flex justify-between text-sm text-gray-600">
+                    <span>{detail.label}</span>
+                    <span>{detail.value}</span>
+                  </div>
+                ))}
+              </div>
+
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Select Size
@@ -62,15 +73,18 @@ export default function ProductDetail() {
                   ))}
                 </select>
               </div>
-              <div className="text-3xl font-bold text-purple-600 mb-8">
-                ${product.price.toFixed(2)}
+              <div className="flex flex-col justify-end items-end space-y-4">
+                <div className="text-3xl font-bold text-purple-600">
+                  ${product.price.toFixed(2)}
+                </div>
+                <button
+                  onClick={handleAddToCart}
+                  className="bg-purple-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors"
+                >
+                  Add to Cart
+                </button>
               </div>
-              <button
-                onClick={handleAddToCart}
-                className="w-full md:w-auto bg-purple-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors"
-              >
-                Add to Cart
-              </button>
+
             </div>
           </div>
         </div>
