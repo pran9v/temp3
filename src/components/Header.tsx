@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/logo2.png';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,23 +16,26 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
+  const navigate = useNavigate();
+
   const openContactForm = () => {
-    window.location.href = '/contact-us';
+    navigate('/contact-us');
+    setIsMenuOpen(false);
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between text-lg">
-        <Link to="/">
-              <img
-                src={logo}
-                alt="IconicMe Logo"
-                className="h-24 w-26 object-contain"
-              />
-            </Link>
+          <Link to="/">
+            <img
+              src={logo}
+              alt="IconicMe Logo"
+              className="h-24 w-26 object-contain"
+            />
+          </Link>
 
-          <button 
+          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-gray-600 hover:text-purple-600"
           >
@@ -57,40 +62,41 @@ export default function Header() {
             <button onClick={openContactForm} className="text-gray-600 hover:text-purple-600">
               Contact Us
             </button>
+
           </div>
         </div>
 
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 py-4 px-6 shadow-lg">
             <div className="flex flex-col space-y-4">
-              <button 
-                onClick={() => handleScrollToSection('products')} 
+              <button
+                onClick={() => handleScrollToSection('products')}
                 className="text-gray-600 hover:text-purple-600 text-left py-2"
               >
                 Products
               </button>
-              <button 
-                onClick={() => handleScrollToSection('features')} 
+              <button
+                onClick={() => handleScrollToSection('features')}
                 className="text-gray-600 hover:text-purple-600 text-left py-2"
               >
                 Features
               </button>
-              <Link 
-                to="/privacy-policy" 
+              <Link
+                to="/privacy-policy"
                 className="text-gray-600 hover:text-purple-600 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Privacy Policy
               </Link>
-              <Link 
-                to="/terms-and-conditions" 
+              <Link
+                to="/terms-and-conditions"
                 className="text-gray-600 hover:text-purple-600 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Terms
               </Link>
-              <button 
-                onClick={openContactForm} 
+              <button
+                onClick={openContactForm}
                 className="text-gray-600 hover:text-purple-600 text-left py-2"
               >
                 Contact Us
