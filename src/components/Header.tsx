@@ -1,22 +1,33 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/logo2.png';
-import { useNavigate } from 'react-router-dom';
 
-
-export default function Header() {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleScrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+    // Check if on a different route
+    if (window.location.pathname !== '/') {
+      // Navigate to the home page
+      navigate('/');
+      // Wait briefly for the page to render before scrolling
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // Scroll directly if already on the home page
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
   };
-
-  const navigate = useNavigate();
 
   const openContactForm = () => {
     navigate('/contact-us');
@@ -35,19 +46,20 @@ export default function Header() {
             />
           </Link>
 
+          {/* Mobile menu toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-gray-600 hover:text-purple-600"
           >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
 
+          {/* Desktop navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => handleScrollToSection('products')} className="text-gray-600 hover:text-purple-600">
+            <button
+              onClick={() => handleScrollToSection('products')}
+              className="text-gray-600 hover:text-purple-600"
+            >
               Products
             </button>
             <Link to="/privacy-policy" className="text-gray-600 hover:text-purple-600">
@@ -59,10 +71,10 @@ export default function Header() {
             <button onClick={openContactForm} className="text-gray-600 hover:text-purple-600">
               Contact Us
             </button>
-
           </div>
         </div>
 
+        {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 py-4 px-6 shadow-lg">
             <div className="flex flex-col space-y-4">
@@ -71,12 +83,6 @@ export default function Header() {
                 className="text-gray-600 hover:text-purple-600 text-left py-2"
               >
                 Products
-              </button>
-              <button
-                onClick={() => handleScrollToSection('features')}
-                className="text-gray-600 hover:text-purple-600 text-left py-2"
-              >
-                Features
               </button>
               <Link
                 to="/privacy-policy"
@@ -104,4 +110,6 @@ export default function Header() {
       </nav>
     </header>
   );
-}
+};
+
+export default Header;

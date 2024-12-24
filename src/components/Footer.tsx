@@ -1,36 +1,54 @@
 import React from 'react';
-import { Camera } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo1.png';
-import { Link } from 'react-router-dom';
 
-export default function Footer() {
-  const handleScrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
+  const navigateToHomeAndScrollToTop = () => {
+    navigate('/');
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
+  const handleNavigateAndScroll = (sectionId: string) => {
+    navigate('/');
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-6">
+        {/* Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Brand Logo and Name */}
           <div>
-            <div className="flex flex-col-2 items-center">
+            <button
+              onClick={navigateToHomeAndScrollToTop}
+              className="flex items-center gap-4 text-left"
+            >
               <img
                 src={logo}
-                alt="IconicMe Logo"
-                className="h-24 w-26 object-contain"
+                alt="Kiddo Jacket Logo"
+                className="h-24 w-24 object-contain"
               />
-              <span className="flex items-center gap-2 mt-4 text-2xl">Kiddo Jacket</span>
-            </div>
+              <span className="text-2xl font-bold">Kiddo Jacket</span>
+            </button>
           </div>
+
+          {/* Product Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => handleScrollToSection('products')}
+                  onClick={() => handleNavigateAndScroll('products')}
                   className="text-gray-400 hover:text-white"
                 >
                   Our Products
@@ -38,24 +56,44 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Company Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/contact-us" className="text-gray-400 hover:text-white">Contact Us</Link></li>
+              <li>
+                <Link to="/contact-us" className="text-gray-400 hover:text-white">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
+
+          {/* Legal Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><Link to="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link> </li>
-              <li><Link to="/terms-and-conditions" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
+              <li>
+                <Link to="/privacy-policy" className="text-gray-400 hover:text-white">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-and-conditions" className="text-gray-400 hover:text-white">
+                  Terms of Service
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
+
+        {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} KiddoJacket. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Kiddo Jacket. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
