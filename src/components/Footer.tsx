@@ -1,6 +1,7 @@
 import React from 'react';
 import { Camera } from 'lucide-react';
 import logo from '../assets/logo1.png';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const handleScrollToSection = (sectionId: string) => {
@@ -54,7 +55,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><a href='/privacy-policy' className="text-gray-400 hover:text-white">Privacy Policy</a></li>
+              <li><Link to="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link> </li>
               <li><a href="/terms-and-conditions" className="text-gray-400 hover:text-white">Terms of Service</a></li>
             </ul>
           </div>
