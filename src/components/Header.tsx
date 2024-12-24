@@ -11,7 +11,7 @@ export default function Header() {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false); // Close menu after clicking
+    setIsMenuOpen(false);
   };
 
   const openContactForm = () => {
@@ -23,9 +23,13 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between text-lg">
-          <div className="flex items-center space-x-2">
-            <img src={logo} alt="IconicMe Logo" className="h-16 md:h-24 w-auto object-contain" />
-          </div>
+        <Link to="/">
+              <img
+                src={logo}
+                alt="IconicMe Logo"
+                className="h-24 w-26 object-contain"
+              />
+            </Link>
 
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
