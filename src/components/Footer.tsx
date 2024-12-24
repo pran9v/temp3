@@ -36,14 +36,6 @@ export default function Footer() {
                   Our Products
                 </button>
               </li>
-              <li>
-                <button
-                  onClick={() => handleScrollToSection('features')}
-                  className="text-gray-400 hover:text-white"
-                >
-                  Features
-                </button>
-              </li>
             </ul>
           </div>
           <div>

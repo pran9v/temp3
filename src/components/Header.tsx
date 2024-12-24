@@ -50,9 +50,6 @@ export default function Header() {
             <button onClick={() => handleScrollToSection('products')} className="text-gray-600 hover:text-purple-600">
               Products
             </button>
-            <button onClick={() => handleScrollToSection('features')} className="text-gray-600 hover:text-purple-600">
-              Features
-            </button>
             <Link to="/privacy-policy" className="text-gray-600 hover:text-purple-600">
               Privacy Policy
             </Link>
