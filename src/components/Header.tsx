@@ -15,8 +15,7 @@ export default function Header() {
   };
 
   const openContactForm = () => {
-    window.open('/contact-us', '_blank');
-    setIsMenuOpen(false);
+    window.location.href = '/contact-us';
   };
 
   return (
