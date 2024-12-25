@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12" style={{background:'black'}}>
       <div className="container mx-auto px-6">
         {/* Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                 alt="Kiddo Jacket Logo"
                 className="h-24 w-24 object-contain"
               />
-              <span className="text-2xl font-bold">Kiddo Jacket</span>
+              <span className="text-2xl font-bold">SHOEHOLIC</span>
             </button>
           </div>
 
@@ -89,12 +89,12 @@ const Footer: React.FC = () => {
 
         {/* Contact Information */}
         <div className="mt-8 text-center text-gray-400">
-          <p>Contact us at: <a href="mailto:email@emgila.com" className="text-white hover:underline">support@kiddojacket.site</a></p>
+          <p>Contact us at: <a href="mailto:email@emgila.com" className="text-white hover:underline">support@shoeholic.site</a></p>
         </div>
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Kiddo Jacket. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SHOEHOLIC. All rights reserved.</p>
         </div>
       </div>
     </footer>

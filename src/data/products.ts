@@ -6,67 +6,72 @@ import image4 from '../assets/image4.jpg';
 
 export const products: Product[] = [
   {
-    id: 'puffer-jacket',
-    name: 'Girls Winter Puffer Jacket',
-    description: 'A warm winter jacket designed to keep girls safe and comfortable in cold weather.',
+    id: 'Dynamic Style Boosters Shoes',//'puffer-jacket'
+    name: 'Dynamic Style Boosters Shoes',
+    description: ' Versatile shoes for gym, walking, and casual styling, blending ultimate comfort with bold design',
     price: 23.37,
     image: image1,
     rating: 5,
-    sizes: ['0-3M', '3-6M', '6-9M', '9-12M'],
-    dummyDetails: [
-      { label: 'Material', value: 'Polyester' },
-      { label: 'Weight', value: '1.2kg' },
-      { label: 'Care Instructions', value: 'Machine wash cold' },
-      { label: 'Brand', value: 'KiddoJacket' },
-      { label: 'Color', value: 'Pink' },
-    ]
+
+    sizes: ['6', '7', '8', '9', '10', '11', '12'],
+dummyDetails: [
+  { label: 'Material', value: 'Breathable Mesh and Synthetic Leather' },
+  { label: 'Weight', value: '800g' },
+  { label: 'Care Instructions', value: 'Wipe clean with a damp cloth' },
+  { label: 'Brand', value: 'Dynamic Wear' },
+  { label: 'Color', value: 'Black and White' },
+]
+
   },
   {
-    id: 'fur-hooded-coat',
-    name: 'Girls/boys Faux Mink Fur Hooded Coat',
-    description: 'A soft faux mink fur hooded coat, offering a luxurious feel and gentle warmth for all-day comfort',
-    price: 29.41,
+    id: 'Elite Comfort Kicks',
+    name: 'Elite Comfort Kicks for Kids',
+    description: 'High-quality kids’s shoes designed for durability, comfort, and style. Perfect for active little feet, offering excellent grip and support.',
+    price: 34.99,
     image: image2,
-    rating: 4.5,
-    sizes: ['0-3M', '3-6M', '6-9M', '9-12M'],
+    rating: 4.7,
+    sizes: ['6', '7', '8', '9', '10', '11', '12'],
     dummyDetails: [
-      { label: 'Material', value: 'Faux Mink Fur' },
-      { label: 'Weight', value: '1.5kg' },
-      { label: 'Care Instructions', value: 'Hand wash cold' },
-      { label: 'Brand', value: 'KiddoJacket' },
-      { label: 'Color', value: 'Brown' },
+      { label: 'Material', value: 'Premium Synthetic Leather and Mesh' },
+      { label: 'Weight', value: '800g' },
+      { label: 'Care Instructions', value: 'Wipe clean with a damp cloth' },
+      { label: 'Brand', value: 'KidStride' },
+      { label: 'Color', value: 'Black with Reflective Accents' },
     ]
   },
   {
-    id: 'fuzzy-hooded',
-    name: 'Girls Hooded Fuzzy Mid-Length Jacket',
-    description: 'A cozy and stylish mid-length jacket with a hood, featuring soft fuzzy fabric and convenient pockets, perfect for fall and winter.',
-    price: 45.99,
-    image: image3,
-    rating: 5,
-    sizes: ['3-6M', '6-9M', '9-12M', '12-18M'],
-    dummyDetails: [
-      { label: 'Material', value: 'Cotton & Polyester blend' },
-      { label: 'Weight', value: '0.9kg' },
-      { label: 'Care Instructions', value: 'Dry clean only' },
-      { label: 'Brand', value: 'KiddoJacket' },
-      { label: 'Color', value: 'Khaki' },
-    ]
+    id: 'Velocity Step Sneakers',
+  name: 'Velocity Step Sneakers',
+  description: 'Stylish and lightweight sneakers designed for active kids. These breathable shoes offer excellent grip, support, and durability for all-day comfort and fun.',
+  price: 39.99,
+  image: image3,
+  rating: 4.8,
+  sizes: ['6', '7', '8', '9', '10', '11', '12'],
+  dummyDetails: [
+    { label: 'Material', value: 'Mesh and PU Leather' },
+    { label: 'Weight', value: '0.7kg' },
+    { label: 'Care Instructions', value: 'Hand wash or wipe clean' },
+    { label: 'Brand', value: 'KidStride' },
+    { label: 'Color Options', value: 'Black, White, Pink' },
+  ]
   },
   {
-    id: 'winter-set',
-    name: 'Winter Warmth Set',
-    description: 'Girls Fashion Diamond Textured Long Sleeve Teddy Jacket, comfortable and warm long Hooded Plush coat winter clothing.',
-    price: 12.81,
+    id: 'Power Play Shoes for Boys',
+    name: 'Power Play Shoes for Boys',
+    description: 'Dynamic and stylish sneakers designed for active boys. With a sporty look and durable build, these shoes ensure comfort and support for every adventure.',
+    price: 28.99,
     image: image4,
-    rating: 4.8,
-    sizes: ['6-9M', '9-12M', '12-18M', '18-24M'],
+    rating: 4.9,
+    sizes: ['6', '7', '8', '9', '10', '11', '12'],
     dummyDetails: [
-      { label: 'Material', value: 'Fleece' },
-      { label: 'Weight', value: '1.0kg' },
-      { label: 'Care Instructions', value: 'Machine wash cold' },
-      { label: 'Brand', value: 'KiddoJacket' },
-      { label: 'Color', value: 'White' },
+      { label: 'Material', value: 'PU Leather and Breathable Mesh' },
+      { label: 'Weight', value: '0.75kg' },
+      { label: 'Care Instructions', value: 'Wipe clean with a damp cloth' },
+      { label: 'Brand', value: 'KidStride' },
+      { label: 'Color', value: 'Red, White, and Navy' },
+      { label: 'Sole Type', value: 'Shock-absorbing Rubber Sole' },
+      { label: 'Closure', value: 'Velcro Strap with Elastic Laces' },
+      { label: 'Special Feature', value: 'Anti-slip Grip for Extra Safety' },
     ]
   }
 ];
