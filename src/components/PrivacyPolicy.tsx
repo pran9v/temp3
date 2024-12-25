@@ -9,7 +9,7 @@ const PrivacyPolicy: React.FC = () => {
     <div className="min-h-screen bg-yellow-50">
       <div id="privacy-policy" className="max-w-4xl mx-auto px-4 py-8 pt-20 bg-yellow-50 text-gray-800">
         <header className="text-center mb-8">
-          <h1 className="text-4xl font-semibold mb-2 text-yellow-500">Privacy Policy</h1>
+          <h1 className="text-4xl font-semibold mb-2 text-black">Privacy Policy</h1>
           <p className="text-lg text-gray-700">
             At shoeholic.site, your privacy is of utmost importance to us.
           </p>
